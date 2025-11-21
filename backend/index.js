@@ -71,6 +71,12 @@ app.use(express.json()); // automatically parse json request
 // initialise the OCR reader with desired language
 await ocr.init(['en']);
 
+
+// This is a GET route for testing the deployment success status
+app.get("/hello", (req, res) => {
+    res.send("Hello World!");
+});
+
 /*
 * This function queries the open API maintained by the U.S. Food & Drug 
 * Administration department, it takes name and GTIN of a medical item, and
