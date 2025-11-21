@@ -73,7 +73,7 @@ await ocr.init(['en']);
 
 
 // This is a GET route for testing the deployment success status
-app.get("/hello", (req, res) => {
+app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
