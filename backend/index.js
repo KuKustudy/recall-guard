@@ -439,11 +439,12 @@ app.post("/imagescan", async (req, res) => {
 });
 
 // specify the API address for backend
+const port = process.env.PORT || 8080;
 if (process.env.NODE_ENV !== "test") {
     if (IS_EXPOSED == "true") {
-        app.listen(8080, '0.0.0.0', () => {console.log('Server running on http://0.0.0.0:8080');});
+        app.listen(port, '0.0.0.0', () => {console.log(`Server running on http://0.0.0.0:${port}`);});
     } else {
-        app.listen(8080, () => console.log("Server started on port 8080"));
+        app.listen(port, () => console.log(`Server started on port ${port}`));
     }
 }
 
